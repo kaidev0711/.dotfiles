@@ -9,6 +9,6 @@ local M = {
 			},
 		},
 	},
-	{ "Bekaboo/dropbar.nvim", event = "VeryLazy" },
+	-- { "Bekaboo/dropbar.nvim", event = "VeryLazy" },
 }
 return M

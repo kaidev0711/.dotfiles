@@ -8,4 +8,4 @@ local M = {
 		require("drop").setup({ theme = "spring" })
 	end,
 }
-return M 
+return M

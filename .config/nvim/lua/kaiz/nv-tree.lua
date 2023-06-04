@@ -11,8 +11,15 @@ local M = {
 			hijack_netrw = true,
 			respect_buf_cwd = true,
 			sync_root_with_cwd = true,
+			-- filters = {
+			-- 	custom = { ".git" },
+			-- },
 			filters = {
-				custom = { ".git" },
+				dotfiles = false,
+				custom = { "^.git$" },
+			},
+			view = {
+				side = "left",
 			},
 			update_focused_file = {
 				enable = true,

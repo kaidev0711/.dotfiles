@@ -21,8 +21,9 @@ function M.config()
 		debug = false,
 		sources = {
 			formatting.prettierd,
+
 			formatting.black.with({ extra_args = { "--fast" } }),
-			diagnostics.flake8,
+			diagnostics.ruff,
 
 			diagnostics.protolint,
 
