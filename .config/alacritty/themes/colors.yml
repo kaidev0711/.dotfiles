@@ -1,0 +1,105 @@
+schemes:
+  ### Rose pine ###
+  rose-pine: &rose-pine
+    primary:
+      background: "0x191724"
+      foreground: "0xe0def4"
+    cursor:
+      text: "0xe0def4"
+      cursor: "0x524f67"
+    vi_mode_cursor:
+      text: "0xe0def4"
+      cursor: "0x524f67"
+    line_indicator:
+      foreground: None
+      background: None
+    selection:
+      text: "0xe0def4"
+      background: "0x403d52"
+    normal:
+      black: "0x26233a"
+      red: "0xeb6f92"
+      green: "0x31748f"
+      yellow: "0xf6c177"
+      blue: "0x9ccfd8"
+      magenta: "0xc4a7e7"
+      cyan: "0xebbcba"
+      white: "0xe0def4"
+    bright:
+      black: "0x6e6a86"
+      red: "0xeb6f92"
+      green: "0x31748f"
+      yellow: "0xf6c177"
+      blue: "0x9ccfd8"
+      magenta: "0xc4a7e7"
+      cyan: "0xebbcba"
+      white: "0xe0def4"
+    hints:
+      start:
+        foreground: "#908caa"
+        background: "#1f1d2e"
+      end:
+        foreground: "#6e6a86"
+        background: "#1f1d2e"
+
+  ### Gruvbox dark ###
+  gruvbox-dark: &gruvbox-dark # Default colors
+    primary:
+      # hard contrast: background = '0x1d2021'
+      background: "#1b1b1b"
+      # soft contrast: background = '0x32302f'
+      foreground: "#ebdbb2"
+
+    # Normal colors
+    normal:
+      black: "#282828"
+      red: "#cc241d"
+      green: "#98971a"
+      yellow: "#d79921"
+      blue: "#458588"
+      magenta: "#b16286"
+      cyan: "#689d6a"
+      white: "#a89984"
+
+    # Bright colors
+    bright:
+      black: "#928374"
+      red: "#fb4934"
+      green: "#b8bb26"
+      yellow: "#fabd2f"
+      blue: "#83a598"
+      magenta: "#d3869b"
+      cyan: "#8ec07c"
+      white: "#ebdbb2"
+
+  ### DRACULA ###
+  dracula: &dracula
+    primary:
+      background: "0x282a36"
+      foreground: "0xf8f8f2"
+
+    # Normal colors
+    normal:
+      black: "0x000000"
+      red: "0xff5555"
+      green: "0x50fa7b"
+      yellow: "0xf1fa8c"
+      blue: "0xcaa9fa"
+      magenta: "0xff79c6"
+      cyan: "0x8be9fd"
+      white: "0xbfbfbf"
+
+    # Bright colors
+    bright:
+      black: "0x282a35"
+      red: "0xff6e67"
+      green: "0x5af78e"
+      yellow: "0xf4f99d"
+      blue: "0xcaa9fa"
+      magenta: "0xff92d0"
+      cyan: "0x9aedfe"
+      white: "0xe6e6e6"
+
+colors: *dracula
+
+
