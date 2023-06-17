@@ -141,3 +141,6 @@ alias scb="brew services restart sketchybar"
 
 # emacs
 alias emacs="open -a /Applications/Emacs.app"
+
+#weather
+alias danang="curl 'wttr.in/danang?format=v2'"

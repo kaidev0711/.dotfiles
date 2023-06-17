@@ -5,7 +5,6 @@ tap "homebrew/cask-versions"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 
-
 brew "libtiff"
 brew "little-cms2"
 brew "aom"
@@ -21,6 +20,7 @@ brew "jasper"
 brew "jq"
 brew "lazydocker"
 brew "lazygit"
+brew "mas"
 brew "neofetch"
 brew "neovim"
 brew "pandoc"
@@ -42,7 +42,6 @@ brew "felixkratz/formulae/sketchybar"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 
-#app
 cask "alacritty"
 cask "brave-browser"
 cask "docker"
@@ -52,3 +51,6 @@ cask "maccy"
 cask "skype"
 cask "temurin11"
 cask "visual-studio-code"
+
+mas "The Unarchiver", id: 425424353
+
