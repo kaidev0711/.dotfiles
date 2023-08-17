@@ -4,7 +4,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
 	git
@@ -13,7 +12,7 @@ plugins=(
 	brew
 	web-search
  	docker
-  z
+	z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -30,34 +29,6 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 alias lg='lazygit'
-
-
-alias djproject="django-admin startproject"
-alias pymn="python manage.py"
-
-alias ts='ts-node'
-
-#pyenv
-alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-alias py3nvim="pyenv activate py3nvim"
-
-function nvimvenv {
-  if [[ -e "$VIRTUAL_ENV" && -f "$VIRTUAL_ENV/bin/activate" ]]; then
-    source "$VIRTUAL_ENV/bin/activate"
-    command nvim "$@"
-    # deactivate
- else
-    command nvim "$@"
-  fi
-}
-
-alias nvim=nvimvenv
-
 
 #exa
 if [ -x "$(command -v exa)" ]; then
@@ -76,34 +47,16 @@ alias ta="tmux attach-session -t"
 alias tk="tmux kill-session -t"
 alias tka="tmux kill-session -a"
 
-#nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#go
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-# export PATH=$PATH:$(go env GOPATH)/bin
-
-#java 
-jdk() {
-      version=$1
-      unset JAVA_HOME;
-      export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
-      java -version
-}
-
-#ipconfig
-alias ip="ipconfig getifaddr en0"
-
-#startship
-eval "$(starship init zsh)"
-
 # brew
 alias brupr="brew update && brew upgrade && brew upgrade --cask"
 
+#weather
+alias danang="curl 'wttr.in/danang?format=v2'"
+
+#nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 #docker
 alias dkps="docker ps"
 alias dkst="docker stats"
@@ -115,32 +68,34 @@ alias dkcpstart="docker-compose start"
 alias dkcpstop="docker-compose stop"
 alias lzd='lazydocker'
 
+#go
+[[ -s "/Users/kaiz/.gvm/scripts/gvm" ]] && source "/Users/kaiz/.gvm/scripts/gvm"
+export GOPATH=$HOME/code/go
+export PATH=$PATH:$(go env GOPATH)/bin
 
-# alias neofetch="neofetch --size 5"
-# neofetch --ascii_distro Manjaro 
-neofetch
+#pyenv
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+alias py3nvim="pyenv activate py3nvim"
 
-# fzf
-export FZF_CTRL_R_OPTS="--reverse"
-export FZF_TMUX_OPTS="-p"
-export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# gcc
-export CC="/opt/homebrew/bin/gcc-13"
+#ipconfig
+alias ip="ipconfig getifaddr en0"
 
+#startship
+eval "$(starship init zsh)"
 
-#term
-export TERM="screen-256color"
+#java 
+jdk() {
+      version=$1
+      unset JAVA_HOME;
+      export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+      java -version
+}
 
-#yabai
-alias ybs="yabai --restart-service"
-#skhd
-alias sks="skhd --restart-service"
-#sketchybar
-alias scb="brew services restart sketchybar"
+# Create a folder and move into it in one command
+function mkcd() { mkdir -p "$@" && cd "$_"; }
 
-# emacs
-alias emacs="open -a /Applications/Emacs.app"
-
-#weather
-alias danang="curl 'wttr.in/danang?format=v2'"
