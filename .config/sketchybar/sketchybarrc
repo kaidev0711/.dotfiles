@@ -6,7 +6,7 @@ source "$HOME/.config/sketchybar/icons.sh"  # Loads all defined icons
 ITEM_DIR="$HOME/.config/sketchybar/items"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
-FONT="FiraCode Nerd Font"
+FONT="Hack Nerd Font"
 # SPACE_CLICK_SCRIPT="yabai -m space --focus \$SID 2>/dev/null" # The script that is run for clicking on space components
 
 PADDINGS=3 # All paddings use this value (icon, label, background)
@@ -20,7 +20,7 @@ SHADOW=on
 
 # General bar and defaults
 
-sketchybar --bar height=30 \
+sketchybar --bar height=32 \
 	color=$BAR_COLOR \
 	shadow=$SHADOW \
 	position=top \
