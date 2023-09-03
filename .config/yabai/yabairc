@@ -49,7 +49,7 @@ yabai -m rule --add app="^Activity Monitor$" manage=off border=off
 yabai -m rule --add app="^System Information$" sticky=on manage=off border=off
 
 yabai -m rule --add app="Alacritty"     space=2
-yabai -m rule --add app="Brave Browser"        space=1
+yabai -m rule --add app="Arc"        space=1
 
 
 echo "yabai configuration loaded.."
