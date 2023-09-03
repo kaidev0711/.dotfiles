@@ -91,12 +91,11 @@ ctrl + alt - r : yabai --restart-service
 #open app
 ctrl + fn - f : open `pwd`
 ctrl + fn - s : open "x-apple.systempreferences:"
-ctrl + fn - a : open -n -a alacritty
-ctrl + fn - m : open -a /Applications/Emacs.app
-ctrl + fn - c : open -na /Applications/Google\ Chrome.app
+ctrl + fn - t : open -n -a alacritty
+# ctrl + fn - m : open -a /Applications/Emacs.app
+ctrl + fn - a : open -na /Applications/Arc.app
 ctrl + fn - d : open -na /Applications/Docker.app
 ctrl + fn - p : open -na /Applications/Postman.app
 ctrl + fn - e : open -na /Applications/EVKey.app
 ctrl + fn - v : open -na /Applications/Visual\ Studio\ Code.app
-
 
