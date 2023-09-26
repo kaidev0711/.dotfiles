@@ -70,7 +70,7 @@ alias lzd='lazydocker'
 
 #go
 [[ -s "/Users/kaiz/.gvm/scripts/gvm" ]] && source "/Users/kaiz/.gvm/scripts/gvm"
-export GOPATH=$HOME/code/go
+export GOPATH=$HOME/dev/go
 export PATH=$PATH:$(go env GOPATH)/bin
 
 #pyenv
@@ -98,3 +98,4 @@ jdk() {
 
 # Create a folder and move into it in one command
 function mkcd() { mkdir -p "$@" && cd "$_"; }
+
