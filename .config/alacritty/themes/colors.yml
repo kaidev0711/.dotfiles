@@ -100,6 +100,5 @@ schemes:
       cyan: "0x9aedfe"
       white: "0xe6e6e6"
 
-colors: *dracula
-
+colors: *rose-pine
 
