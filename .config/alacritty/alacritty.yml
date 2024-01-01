@@ -1,8 +1,9 @@
 import:
   - "~/.config/alacritty/themes/colors.yml"
+  - "~/.config/alacritty/themes/tokyo.yml"
 
 font:
-  size: 16
+  size: 14
   offset:
     x: 0
     y: 0
@@ -25,21 +26,24 @@ window:
     y: 2
   dynamic_padding: false
   dimensions:
-    columns: 145
-    lines: 45
+    columns: 160
+    lines: 50
   # opacity: 0.7
-  opacity: 0.8
-  decorations: buttonless
-  # decorations: full
+  opacity:
+    0.8
+    #decorations: buttonless
+  decorations: full
 
 draw_bold_text_with_bright_colors: true
 
 cursor:
   unfocused_hollow: true
   # unfocused_hollow: false
-  style: 
+  style:
     shape: Beam
     blinking: Always
+  vi_mode_style:
+    shape: Block
   blink_interval: 500
   thickness: 0.15
 
@@ -81,11 +85,3 @@ mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
 window.option_as_alt: true
-# key_bindings:
-#   - { key: H, mods: Command, action: Hide }
-#   - { key: Q, mods: Command, action: Quit }
-#   - { key: V, mods: Command, action: Paste }
-#   - { key: C, mods: Command, action: Copy }
-#   - { key: Key0, mods: Command, action: ResetFontSize }
-#   - { key: Equals, mods: Command, action: IncreaseFontSize }
-#   - { key: Minus, mods: Command, action: DecreaseFontSize }
